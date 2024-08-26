@@ -7,24 +7,12 @@ you need to set up a prisma database so this program can work properly to do tha
 ```bash
 bun add prisma -D
 ```
-after that run the following comand so the schema base for sqlite works properly
-```bash
-bunx prisma init --datasource-provider sqlite
-```
-with that you must see inside the project folder a new folder called "prisma" and a document called "schema.prisma"
-
-inside that document add a new table though the model with
+Every configuration is already in the docment schema.prisma for that reason the only real thing you have to do is set up the .env for the Database url for that create a .env and paste the following line of code
 
 ```bash
-model Task {
-  id       Int   @id @default(autoincrement())
-  name     String
-  description  String?
-  priority String    @default("low")
-  createdAt  DateTime  @default(now())
-  updatedAt  DateTime  @updatedAt
-}
+DATABASE_URL="file:./dev.db"
 ```
+
 and then run the migrations
 
 ```bash
