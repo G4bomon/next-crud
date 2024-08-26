@@ -13,7 +13,7 @@ bunx prisma init --datasource-provider sqlite
 ```
 with that you must see inside the project folder a new folder called "prisma" and a document called "schema.prisma"
 
-inside that folder add a new tabel though the model with
+inside that document add a new table though the model with
 
 ```bash
 model Task {
